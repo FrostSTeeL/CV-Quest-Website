@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Unity WebGL Player | CVQuest</title>
+        <title>CVQuest</title>
         <link rel="shortcut icon" href="TemplateData/favicon.ico" />
         <link rel="stylesheet" href="TemplateData/style.css" />
     </head>
@@ -18,9 +18,13 @@
             </div>
             <div id="unity-warning"></div>
             <div id="unity-footer">
-                <div id="unity-webgl-logo"></div>
-                <div id="unity-fullscreen-button"></div>
-                <div id="unity-build-title">CVQuest</div>
+                <div class="cv-container" id="CV" style="display: none">
+                    <h2>
+                        You have found all the missing pages of
+                        <a href="./cv.pdf" target="_blank"> Curriculum Vitae</a
+                        >!
+                    </h2>
+                </div>
             </div>
         </div>
         <script>
@@ -120,9 +124,6 @@
                 })
                     .then((unityInstance) => {
                         loadingBar.style.display = "none";
-                        fullscreenButton.onclick = () => {
-                            unityInstance.SetFullscreen(1);
-                        };
                     })
                     .catch((message) => {
                         alert(message);
@@ -130,8 +131,5 @@
             };
             document.body.appendChild(script);
         </script>
-        <div class="cv-container">
-            <h1 id="CV" style="display: none">This is the CV!</h1>
-        </div>
     </body>
 </html>
