@@ -7,7 +7,7 @@
         <link rel="shortcut icon" href="TemplateData/favicon.ico" />
         <link rel="stylesheet" href="TemplateData/style.css" />
     </head>
-    <body style="background-color: rgb(0, 0, 0)">
+    <body>
         <div id="unity-container" class="unity-desktop">
             <canvas id="unity-canvas" width="960" height="600"></canvas>
             <div id="unity-loading-bar">
@@ -17,25 +17,7 @@
                 </div>
             </div>
             <div id="unity-warning"></div>
-            <div id="unity-footer">
-                <div
-                    class="cv-container"
-                    id="CV"
-                    style="
-                        display: none;
-                        justify-content: center;
-                        align-items: center;
-                    "
-                >
-                    <a href="./cv.pdf">
-                        <button
-                            style="border: none; background-color: transparent"
-                        >
-                            <img src="./tome.png" alt="" srcset="" />
-                        </button>
-                    </a>
-                </div>
-            </div>
+            <div id="unity-footer"></div>
         </div>
         <script>
             var container = document.querySelector("#unity-container");
@@ -78,11 +60,11 @@
             }
 
             var buildUrl = "Build";
-            var loaderUrl = buildUrl + "/Test.loader.js";
+            var loaderUrl = buildUrl + "/CV Quest.loader.js";
             var config = {
-                dataUrl: buildUrl + "/Test.data",
-                frameworkUrl: buildUrl + "/Test.framework.js",
-                codeUrl: buildUrl + "/Test.wasm",
+                dataUrl: buildUrl + "/CV Quest.data",
+                frameworkUrl: buildUrl + "/CV Quest.framework.js",
+                codeUrl: buildUrl + "/CV Quest.wasm",
                 streamingAssetsUrl: "StreamingAssets",
                 companyName: "DefaultCompany",
                 productName: "CVQuest",
